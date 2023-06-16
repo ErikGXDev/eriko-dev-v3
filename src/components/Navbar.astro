@@ -1,0 +1,23 @@
+---
+var links = {
+  Home: "/#Home",
+  Projects: "/projects",
+  Blog: "/#Blog",
+  Contact: "/#Contact",
+};
+---
+
+<div class="w-full flex justify-center py-8">
+  <nav class="flex justify-start items-center gap-4 text-xl w-full md:w-2/3">
+    {
+      Object.keys(links).map((v, i) => (
+        <a
+          href={links[v as keyof typeof links]}
+          class="hover:underline decoration-transparent hover:decoration-light transition-colors"
+        >
+          {v}
+        </a>
+      ))
+    }
+  </nav>
+</div>

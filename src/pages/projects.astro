@@ -1,0 +1,18 @@
+---
+import ProjectList from "../components/projects/ProjectList";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ErikoXDev">
+  <main class="flex flex-col items-center">
+    <section id="Home" class="flex flex-col md:w-2/3 pb-16">
+      <h1 class="text-4xl mt-4 mb-2 font-black">Projects</h1>
+      <p class="mb-4">
+        Here you can see the projects that I have made over the years. <br
+          class="hidden md:block"
+        />Click on the Buttons below to filter the project list!
+      </p>
+      <ProjectList client:load />
+    </section>
+  </main>
+</Layout>
