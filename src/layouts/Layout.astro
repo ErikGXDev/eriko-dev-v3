@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
 
+import { SEO } from "astro-seo";
+
 export interface Props {
   title: string;
 }
@@ -11,10 +13,44 @@ const { title } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <SEO
+      title={title}
+      description="Hi, I'm ErikoXDev! Here I showcase all my projects that I have designed and programmed over the years!"
+      openGraph={{
+        basic: {
+          title: "ErikoXDev",
+          type: "website",
+          image: "https://eriko.dev/banner.png",
+          url: "https://eriko.dev",
+        },
+        optional: {
+          description:
+            "Hi, I'm ErikoXDev! Here I showcase all my projects that I have designed and programmed over the years!",
+        },
+      }}
+      extend={{
+        // extending the default link tags
+        link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+        // extending the default meta tags
+        meta: [
+          {
+            name: "twitter:card",
+            content: "summary_large_image",
+          },
+          {
+            name: "twitter:image",
+            content: "https://eriko.dev/banner.png",
+          },
+          { name: "twitter:title", content: "ErikoXDev" },
+          {
+            name: "twitter:description",
+            content:
+              "Hi, I'm ErikoXDev! Here I showcase all my projects that I have designed and programmed over the years!",
+          },
+        ],
+      }}
+    />
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link
