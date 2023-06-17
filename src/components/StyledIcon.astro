@@ -1,0 +1,18 @@
+---
+// Icons at: https://icon-sets.iconify.design/
+
+import { Icon } from "astro-icon";
+
+interface Props {
+  name: string;
+  size?: number;
+}
+
+const { name, size } = Astro.props;
+---
+
+<div
+  class="p-2 bg-light/5 rounded-full hover:bg-light/10 transition-colors select-none cursor-pointer"
+>
+  <Icon name={name} class={size ? `w-${size} h-${size}` : "w-8 h-8"} />
+</div>

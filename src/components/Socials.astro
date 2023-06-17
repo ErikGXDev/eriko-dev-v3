@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import StyledIcon from "./StyledIcon.astro";
 import ReplitIcon from "./icons/ReplitIcon.astro";
 
 const socials = [
@@ -25,13 +25,8 @@ const socials = [
 <div class="flex gap-2">
   {
     socials.map((v) => (
-      <a
-        href={v.link}
-        class="p-2 bg-light/5 rounded-full hover:bg-light/10 transition-colors select-none"
-        rel="noreferrer"
-        target="_blank"
-      >
-        <Icon name={v.icon} class="w-8 h-8" />
+      <a href={v.link} rel="noreferrer" target="_blank">
+        <StyledIcon name={v.icon} />
       </a>
     ))
   }

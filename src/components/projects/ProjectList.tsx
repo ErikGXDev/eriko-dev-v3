@@ -2,7 +2,6 @@ import Pill from "../Pill";
 import projects from "../../assets/projects.json";
 import Card from "./Card";
 import { useState } from "preact/hooks";
-
 export default function ProjectList() {
   const [filterCategory, setFilterCategory] = useState(0);
 
@@ -23,6 +22,7 @@ export default function ProjectList() {
               (filterCategory == i ? "" : "brightness-75")
             }
             data-i={i}
+            key={i}
             onClick={(e) => {
               setFilterCategory(i);
             }}
@@ -37,8 +37,8 @@ export default function ProjectList() {
             (project) =>
               filterCategory == 0 || project.category.includes(filterCategory)
           )
-          .map((project) => (
-            <Card data={project} />
+          .map((project, i) => (
+            <Card key={i} data={project} dots />
           ))}
       </div>
     </>
