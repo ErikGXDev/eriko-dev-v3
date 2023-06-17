@@ -1,4 +1,4 @@
-import { colors } from "../../util/colors";
+import { colors } from "../../util/util";
 import { useState } from "preact/hooks";
 
 export default function Filter({

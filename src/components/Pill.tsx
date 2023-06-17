@@ -3,7 +3,7 @@ interface Props {
   children: string;
 }
 
-import { colors } from "../util/colors";
+import { colors } from "../util/util";
 
 export default function Pill({ color, children }: Props) {
   return (
