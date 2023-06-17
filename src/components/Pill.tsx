@@ -10,7 +10,7 @@ export default function Pill({ color, children }: Props) {
     <div
       class={
         "rounded-full p-2 px-4 " +
-        (colors[color as keyof typeof colors] || "bg-amber-500")
+        ("bg-" + colors[color as keyof typeof colors] || "bg-amber-500")
       }
     >
       {children}

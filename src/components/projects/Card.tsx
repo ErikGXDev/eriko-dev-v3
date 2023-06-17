@@ -5,7 +5,7 @@ interface Props {
     title: string;
     description: string;
     link: string;
-    category: number[];
+    category?: number[];
   };
   dots?: boolean;
 }
@@ -18,7 +18,7 @@ export default function Card({ data, dots }: Props) {
       <article class="p-4 rounded-lg bg-light/2 hover:bg-light/5 border border-light/10 transition-colors h-full">
         <div class="flex justify-between gap-2">
           <h2 class="text-xl font-black mb-1">{data.title}</h2>
-          {dots && (
+          {dots && data.category && (
             <div class="flex gap-1">
               {data.category.map((cat) => (
                 <Dot color={colors[cat - 1]} />

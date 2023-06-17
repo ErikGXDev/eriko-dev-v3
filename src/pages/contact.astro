@@ -1,0 +1,35 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { socials } from "../util/util";
+
+const colors = ["amber", "orange", "pink", "fuchsia"];
+---
+
+<Layout title="ErikoXDev">
+  <main class="flex flex-col items-center">
+    <section id="Home" class="flex flex-col md:w-2/3 pb-16">
+      <h1 class="text-4xl mt-4 mb-2 font-black">Contact</h1>
+      <p class="mb-4 text-xl">
+        If you wish to contact me, feel free to do so! Here are some platforms
+        I'm most active in:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+        {
+          socials.map((social, i) => (
+            <Card
+              data={{
+                title: social.title,
+                description: social.description,
+                link: social.link,
+                icon: social.icon,
+                color: colors[i],
+              }}
+            />
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
