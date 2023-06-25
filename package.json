@@ -17,6 +17,7 @@
     "astro-icon": "^0.8.0",
     "astro-seo": "^0.7.4",
     "lodash": "^4.17.21",
+    "postcss": "^8.4.24",
     "preact": "^10.15.1",
     "tailwindcss": "^3.3.2"
   },
