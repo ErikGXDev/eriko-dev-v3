@@ -1,4 +1,4 @@
-import { colors } from "../../util/util";
+import { colors } from "../../util";
 
 export default function Dot({ color }: { color: string }) {
   return (

@@ -35,6 +35,9 @@ module.exports = {
         dark: "#141516ff",
         light: "#f9f9f4ff",
       },
+      backgroundImage: {
+        waves: "url('waves.svg')",
+      },
     },
   },
   safelist: ["w-4", "w-6", "w-8", ...result],
