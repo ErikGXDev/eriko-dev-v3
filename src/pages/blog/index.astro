@@ -1,0 +1,15 @@
+---
+import { getCollection } from "astro:content";
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getPageNumbers, socials, colors, postsPerPage } from "../../util";
+import Posts from "../../layouts/Posts.astro";
+
+const posts = await getCollection("blog");
+
+const totalPages = getPageNumbers(posts.length);
+
+const paginatedPosts = posts.slice(0, postsPerPage);
+---
+
+<Posts posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />

@@ -25,7 +25,6 @@ const { data } = Astro.props;
           (data.color
             ? "text-" + colors[data.color as keyof typeof colors]
             : "text-light")}
-        }
       >
         {data.icon && <Icon name={data.icon} class="w-6 h-6" />}
         <h2 class={"text-xl font-black "}>

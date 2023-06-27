@@ -1,0 +1,15 @@
+---
+import type { BlogFrontmatter } from "../content/_schemas";
+interface Props {
+  frontmatter: BlogFrontmatter;
+  href: string;
+}
+
+const { frontmatter, href } = Astro.props;
+---
+
+<li>
+  <a href={href}>
+    {frontmatter.title}
+  </a>
+</li>

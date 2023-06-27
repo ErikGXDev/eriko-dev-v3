@@ -1,3 +1,5 @@
+import { slug } from "github-slugger";
+
 export const colors = {
   neutral: "neutral-600",
   amber: "amber-600",
@@ -43,3 +45,20 @@ export const socials: Socials[] = [
       "If you really need to email me something, do it at contact@eriko.dev!",
   },
 ];
+
+export function slugify(str: string) {
+  return slug(str);
+}
+
+export function getPageNumbers(numberOfPosts: number) {
+  const numberOfPages = numberOfPosts / Number(postsPerPage);
+
+  let pageNumbers: number[] = [];
+  for (let i = 1; i <= Math.ceil(numberOfPages); i++) {
+    pageNumbers = [...pageNumbers, i];
+  }
+
+  return pageNumbers;
+}
+
+export const postsPerPage = 3;
