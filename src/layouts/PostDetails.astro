@@ -4,6 +4,7 @@ import Layout from "./Layout.astro";
 import Datetime from "../components/blog/Datetime.astro";
 import Icon from "astro-icon";
 import ProfileImage from "../components/ProfileImage.astro";
+import Socials from "../components/Socials.astro";
 export interface Props {
   post: CollectionEntry<"blog">;
 }
@@ -23,6 +24,7 @@ const { Content } = await post.render();
         class="w-fit flex items-center mb-4 hover:text-light/80"
         ><Icon name="fe:arrow-left" size={16} /> Go back</button
       >
+
       <h1 class="text-4xl text-amber-500 mb-1">{title}</h1>
       <Datetime datetime={pubDatetime} />
       <span class="flex mt-2 gap-1"
@@ -30,6 +32,17 @@ const { Content } = await post.render();
       >
       <article class="mb-2 mt-8 prose prose-invert text-base">
         <Content />
+        <div
+          class="w-full border-t border-t-light/20 pt-4 flex gap-2 items-center justify-between"
+        >
+          <a
+            href="/blog"
+            onclick=""
+            class="w-fit flex gap-1 items-center mb-4 hover:text-light/80"
+            >Back to Blog</a
+          >
+          <Socials size={6} />
+        </div>
       </article>
     </section>
   </main>
