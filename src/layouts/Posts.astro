@@ -1,8 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
-import Card from "../components/Card.astro";
-import Post from "../components/Post.astro";
+import Post from "../components/blog/Post.astro";
 import { slugify } from "../util";
 
 export interface Props {
@@ -19,12 +18,12 @@ const next = pageNum < totalPages ? "" : "disabled";
 
 <Layout title="Blog">
   <main class="flex flex-col items-center">
-    <section id="Home" class="flex flex-col md:w-2/3 pb-16">
-      <h1 class="text-4xl mt-4 mb-2 font-black">Blog</h1>
+    <section id="Blog" class="flex flex-col md:w-2/3 pb-16">
+      <h1 class="text-4xl mt-4 mb-2 font-black">My Blog</h1>
       <p class="mb-4 text-xl">
         Here are all the articles I've posted on this site!
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
+      <div class="grid grid-cols-1 gap-3 mt-4 list-none">
         {
           posts.map(({ data }) => (
             <>

@@ -6,6 +6,7 @@ export const blogSchema = z
     postSlug: z.string().optional(),
     draft: z.boolean().optional(),
     description: z.string(),
+    pubDatetime: z.date(),
   })
   .strict();
 

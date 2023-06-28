@@ -1,20 +1,32 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
+import Datetime from "../components/blog/Datetime.astro";
+import Icon from "astro-icon";
 export interface Props {
   post: CollectionEntry<"blog">;
 }
 
 const { post } = Astro.props;
 
-const { title, description } = post.data;
+const { title, pubDatetime } = post.data;
 
 const { Content } = await post.render();
 ---
 
 <Layout title={title}>
-  <main>
-    <h1>{title}</h1>
-    <p>{description}</p>
+  <main class="flex flex-col items-center">
+    <section id="Blog" class="flex flex-col md:w-2/3 pb-16">
+      <button
+        onclick="history.back()"
+        class="w-fit flex items-center mb-4 hover:text-light/80"
+        ><Icon name="fe:arrow-left" size={16} /> Go back</button
+      >
+      <h1 class="text-4xl text-amber-500">{title}</h1>
+      <Datetime datetime={pubDatetime} />
+      <article class="mb-2 mt-8 prose prose-invert text-base">
+        <Content />
+      </article>
+    </section>
   </main>
 </Layout>

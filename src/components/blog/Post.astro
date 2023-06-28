@@ -1,0 +1,23 @@
+---
+import type { BlogFrontmatter } from "../../content/_schemas";
+import Datetime from "./Datetime.astro";
+interface Props {
+  frontmatter: BlogFrontmatter;
+  href: string;
+}
+
+const { frontmatter, href } = Astro.props;
+
+const { title, description, pubDatetime } = frontmatter;
+---
+
+<li class="my-8 flex flex-col gap-1">
+  <a
+    href={href}
+    class="font-black text-2xl text-amber-500 hover:text-pink-600 transition-colors underline decoration-transparent hover:decoration-pink-600"
+  >
+    <h2>{title}</h2>
+  </a>
+  <Datetime datetime={pubDatetime} />
+  <p class="text-lg">{description}</p>
+</li>

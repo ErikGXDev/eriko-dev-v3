@@ -21,9 +21,13 @@
     "lodash": "^4.17.21",
     "postcss": "^8.4.24",
     "preact": "^10.15.1",
+    "rehype-external-links": "^2.1.0",
+    "remark-collapse": "^0.1.2",
+    "remark-toc": "^8.0.1",
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/lodash": "^4.14.195"
   }
 }

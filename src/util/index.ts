@@ -1,4 +1,5 @@
 import { slug } from "github-slugger";
+import type { BlogFrontmatter } from "../content/_schemas";
 
 export const colors = {
   neutral: "neutral-600",
@@ -46,8 +47,8 @@ export const socials: Socials[] = [
   },
 ];
 
-export function slugify(str: string) {
-  return slug(str);
+export function slugify(post: BlogFrontmatter) {
+  return post.postSlug ? slug(post.postSlug) : slug(post.title);
 }
 
 export function getPageNumbers(numberOfPosts: number) {

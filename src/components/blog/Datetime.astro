@@ -1,0 +1,32 @@
+---
+import Icon from "astro-icon";
+interface Props {
+  datetime: string | Date;
+}
+
+const { datetime } = Astro.props;
+
+const myDatetime = new Date(datetime);
+
+const date = myDatetime.toLocaleDateString("en-EN", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const time = myDatetime.toLocaleTimeString("en-EN", {
+  hour: "2-digit",
+  minute: "2-digit",
+});
+---
+
+<div class="text-light/50 flex items-center gap-1">
+  <Icon name="fe:calendar" size={24} />
+  <span class="sr-only">Posted on:</span>
+  <span class="italic">
+    {date}
+    <span aria-hidden="true"> |</span>
+    <span class="sr-only">&nbsp;at&nbsp;</span>
+    {time}
+  </span>
+</div>
