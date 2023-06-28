@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
 import Datetime from "../components/blog/Datetime.astro";
 import Icon from "astro-icon";
+import ProfileImage from "../components/ProfileImage.astro";
 export interface Props {
   post: CollectionEntry<"blog">;
 }
@@ -22,8 +23,11 @@ const { Content } = await post.render();
         class="w-fit flex items-center mb-4 hover:text-light/80"
         ><Icon name="fe:arrow-left" size={16} /> Go back</button
       >
-      <h1 class="text-4xl text-amber-500">{title}</h1>
+      <h1 class="text-4xl text-amber-500 mb-1">{title}</h1>
       <Datetime datetime={pubDatetime} />
+      <span class="flex mt-2 gap-1"
+        >Posted by: <ProfileImage width="24" /> ErikoXDev</span
+      >
       <article class="mb-2 mt-8 prose prose-invert text-base">
         <Content />
       </article>

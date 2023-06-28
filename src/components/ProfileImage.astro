@@ -1,6 +1,14 @@
+---
+interface Props {
+  width?: string;
+}
+
+const { width } = Astro.props;
+---
+
 <img
-  src="eriko_4k.png"
-  class="bg-light/5 rounded-full"
-  width="128"
+  src="/eriko_4k.png"
+  class="bg-light/5 rounded-full aspect-square"
+  width={width || "128"}
   alt="ErikoXDev Profile"
 />
