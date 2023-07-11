@@ -3,7 +3,7 @@ import Pill from "../components/Pill";
 import ProjectList from "../components/projects/ProjectList";
 import Socials from "../components/Socials.astro";
 import Layout from "../layouts/Layout.astro";
-import RandomProjects from "../components/projects/RandomProjects";
+import FeaturedProjects from "../components/projects/FeaturedProjects";
 import StyledIcon from "../components/StyledIcon.astro";
 ---
 
@@ -13,9 +13,9 @@ import StyledIcon from "../components/StyledIcon.astro";
       <div
         class="w-full flex flex-col md:flex-row gap-4 items-center md:items-start"
       >
-        <div class="h-full">
+        <div class="h-full flex-shrink">
           <h1 class="text-6xl font-black text-center md:text-start">
-            Hi, I'm ErikoXDev!
+            Hi, I'm Erik G.!
           </h1>
           <div
             class="flex flex-wrap mt-4 gap-2 justify-center md:justify-start"
@@ -24,15 +24,17 @@ import StyledIcon from "../components/StyledIcon.astro";
             <Pill color="pink">Designer</Pill>
             <Pill color="fuchsia">Pixel Artist</Pill>
           </div>
-          <p class="text-xl md:w-3/4 xl:w-2/3 mt-8 text-center md:text-start">
+          <p class="text-xl md:w-3/4 xl:w-5/6 mt-8 text-center md:text-start">
             Welcome to the third iteration of my portfolio! Here I showcase all
             my projects that I have coded over the years!
           </p>
         </div>
-        <div class="flex-grow flex justify-center">
+        <div
+          class="flex-grow flex justify-center items-center md:w-1/4 sm:block md:hidden xl:block"
+        >
           <img
             src="eriko_4k.png"
-            class="bg-light/5 rounded-full select-none"
+            class="bg-light/5 rounded-full select-none mt-3 md:mt-0"
             width="128"
             alt="ErikoXDev Profile Picture"
           />
@@ -51,7 +53,7 @@ import StyledIcon from "../components/StyledIcon.astro";
           class="hover:text-light text-light/95 underline">project page</a
         >.
       </p>
-      <RandomProjects count={4} />
+      <FeaturedProjects count={4} />
     </section>
   </main>
 </Layout>

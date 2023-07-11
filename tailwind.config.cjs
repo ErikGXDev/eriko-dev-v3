@@ -14,12 +14,12 @@ function combineArrays(array1, array2) {
 
 const array1 = ["bg-", "text-"];
 const array2 = [
-  "neutral-600",
-  "amber-600",
-  "orange-600",
-  "pink-600",
-  "fuchsia-600",
-  "purple-600",
+  "neutral-500",
+  "amber-500",
+  "orange-500",
+  "pink-500",
+  "fuchsia-500",
+  "purple-500",
 ];
 
 const result = combineArrays(array1, array2);

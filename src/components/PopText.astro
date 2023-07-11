@@ -1,0 +1,15 @@
+---
+import { colors } from "../util";
+interface Props {
+  text: string;
+  color: string;
+}
+
+const { text, color } = Astro.props;
+---
+
+<div class="relative text-2xl bg-light/5 p-2">
+  <p class={"text-" + (colors[color as keyof typeof colors] || "amber-500")}>
+    {text}
+  </p>
+</div>

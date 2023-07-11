@@ -13,7 +13,12 @@ const { size } = Astro.props;
 <div class="flex gap-2">
   {
     socials.map((v) => (
-      <a href={v.link} rel="noreferrer" target="_blank">
+      <a
+        href={v.link}
+        rel="noreferrer"
+        target="_blank"
+        aria-label={"Erik's " + v.title + " Profile Link."}
+      >
         <StyledIcon name={v.icon} size={size} />
       </a>
     ))

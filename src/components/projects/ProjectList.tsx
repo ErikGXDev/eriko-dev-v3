@@ -14,7 +14,7 @@ export default function ProjectList() {
 
   return (
     <>
-      <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+      <div class="flex flex-wrap gap-2 justify-start">
         {pills.map((pill, i) => (
           <div
             class={
@@ -27,7 +27,9 @@ export default function ProjectList() {
               setFilterCategory(i);
             }}
           >
-            <Pill color={pill.color}>{pill.text}</Pill>
+            <Pill color={pill.color} inflate>
+              {pill.text}
+            </Pill>
           </div>
         ))}
       </div>

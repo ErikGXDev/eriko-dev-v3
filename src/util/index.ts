@@ -2,12 +2,12 @@ import { slug } from "github-slugger";
 import type { BlogFrontmatter } from "../content/_schemas";
 
 export const colors = {
-  neutral: "neutral-600",
-  amber: "amber-600",
-  orange: "orange-600",
-  pink: "pink-600",
-  fuchsia: "fuchsia-600",
-  purple: "purple-600",
+  neutral: "neutral-500",
+  amber: "amber-500",
+  orange: "orange-500",
+  pink: "pink-500",
+  fuchsia: "fuchsia-500",
+  purple: "purple-500",
 };
 
 export interface Socials {
@@ -19,10 +19,17 @@ export interface Socials {
 
 export const socials: Socials[] = [
   {
-    link: "https://github.com/ErikoXDev",
+    link: "https://github.com/ErikGaDev",
     icon: "fe:github",
     title: "GitHub",
     description: "GitHub is where I keep most of my open-source projects!",
+  },
+  {
+    link: "https://discordapp.com/users/610788461028573194",
+    icon: "fa-brands:discord",
+    title: "Discord",
+    description:
+      "You can pretty much always reach me on Discord. Username: erik_x",
   },
   {
     link: "https://twitter.com/ErikoXDev",
@@ -30,13 +37,6 @@ export const socials: Socials[] = [
     title: "Twitter",
     description:
       "I usally don't use Twitter often, but I made one just in case.",
-  },
-  {
-    link: "https://discordapp.com/users/610788461028573194",
-    icon: "fa-brands:discord",
-    title: "Discord",
-    description:
-      "You can pretty much always reach me on Discord. Username: erikox",
   },
   {
     link: "mailto:contact@eriko.dev",
