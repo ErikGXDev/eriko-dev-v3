@@ -2,6 +2,7 @@ import { slug } from "github-slugger";
 import type { BlogFrontmatter } from "../content/_schemas";
 
 export const colors = {
+  light: "light",
   neutral: "neutral-500",
   amber: "amber-500",
   orange: "orange-500",

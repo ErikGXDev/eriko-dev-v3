@@ -5,17 +5,20 @@ import preact from "@astrojs/preact";
 import remarkCollapse from "remark-collapse";
 import astroRemark from "@astrojs/markdown-remark";
 import rehypeExternalLinks from "rehype-external-links";
-
 import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
+
+import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://eriko.dev",
-  integrations: [tailwind(), sitemap(), preact(), mdx()],
+  integrations: [tailwind(), sitemap(), preact(), mdx(), partytown()],
   markdown: {
     extendDefaultPlugins: true,
     remarkPlugins: [remarkToc],
-    rehypePlugins: [[rehypeExternalLinks, { target: "_blank" }]],
-  },
+    rehypePlugins: [[rehypeExternalLinks, {
+      target: "_blank"
+    }]]
+  }
 });

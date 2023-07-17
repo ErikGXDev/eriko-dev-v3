@@ -6,7 +6,7 @@ export default function ProjectList() {
   const [filterCategory, setFilterCategory] = useState(0);
 
   const pills = [
-    { color: "neutral", text: "No Filter" },
+    { color: "light", text: "No Filter" },
     { color: "amber", text: "Programming" },
     { color: "pink", text: "Design" },
     { color: "fuchsia", text: "Pixel Art" },
