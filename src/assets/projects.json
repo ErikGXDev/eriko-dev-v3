@@ -1,14 +1,20 @@
 [
   {
-    "title": "Express Uptimer",
-    "description": "Uptimer you can host yourself to keep your websites online!",
-    "link": "https://github.com/ErikoXDev/express-uptimer",
-    "category": [1, 2],
+    "title": "Geometrize Video",
+    "description": "Convert your video into geometric primitives.",
+    "link": "https://github.com/ErikGaDev/geometrize-video-nodejs",
+    "category": [1],
     "featured": true
   },
   {
+    "title": "Express Uptimer",
+    "description": "Uptimer you can host yourself to keep your websites online!",
+    "link": "https://github.com/ErikoXDev/express-uptimer",
+    "category": [1, 2]
+  },
+  {
     "title": "Discord Bot CDN",
-    "description": "Use a discord bot to upload files to discord and share them with anyone you like!",
+    "description": "Turn discord into a CDN using a discord bot!",
     "link": "https://github.com/ErikoXDev/discord-bot-cdn",
     "category": [1],
     "featured": true
@@ -28,20 +34,20 @@
   },
   {
     "title": "Mark's Food Place",
-    "description": "A restaurant game about filling orders while your balance constantly gets lowered. Winner of MarkJam 5.",
+    "description": "A restaurant game about fulfilling orders. Winner of MarkJam 5.",
     "link": "https://erikoxdev.itch.io/marks-food-place",
     "category": [1, 3]
   },
   {
     "title": "Mark's Knight",
-    "description": "An infinite dungeon game about fighting corrupted version of mark using your sword and bombs! Winner of MarkJam 4.",
+    "description": "An infinite dungeon game. Winner of MarkJam 4.",
     "link": "https://erikoxdev.itch.io/mark-knight",
     "category": [1, 3],
     "featured": true
   },
   {
     "title": "Atom One Dark for Replit.com",
-    "description": "The popular Visual Studio Code theme ported to replit.com",
+    "description": "The popular Visual Studio Code theme ported to Replit.com",
     "link": "https://replit.com/theme/@ErikoXDev/atom-one-dark",
     "category": [2]
   },
@@ -50,11 +56,5 @@
     "description": "Play minigolf in this pixel art browser game.",
     "link": "https://Golf-Course.erikoxdev.repl.co",
     "category": [1, 3]
-  },
-  {
-    "title": "Replit Profile Viewer",
-    "description": "Alternative profile page for Replit users. Get repls, roles and languages from users using Replit's GraphQL API.",
-    "link": "https://Replit-Profile-Viewer.erikoxdev.repl.co",
-    "category": [1, 2, 3]
   }
 ]

@@ -20,7 +20,7 @@ export interface Socials {
 
 export const socials: Socials[] = [
   {
-    link: "https://github.com/ErikGaDev",
+    link: "https://github.com/ErikXDev",
     icon: "fe:github",
     title: "GitHub",
     description: "GitHub is where I keep most of my open-source projects!",
